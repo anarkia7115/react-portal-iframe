@@ -1,19 +1,5 @@
 'use strict';
 
-const e = React.createElement;
-
-class Wrapper extends React.Component {
-  render() {
-    return (
-      <div id={this.props.name}>
-        <p>wrapper start: {this.props.name}</p>
-          {this.props.children}
-        <p>wrapper end: {this.props.name}</p>
-      </div>
-    )
-  }
-}
-
 class StylePortal extends React.Component {
   genStyleCss(styleMap) {
     /**
@@ -106,12 +92,6 @@ class App extends React.Component {
   render() {
     return (
     <div>
-      <Wrapper name="element1">
-        <h1>Hello, world!</h1>
-      </Wrapper>
-      <Wrapper name="element2">
-        <h1>Hello, world!</h1>
-      </Wrapper>
       <iframe
         id="iframe"
         src="./static/iframe.html"
